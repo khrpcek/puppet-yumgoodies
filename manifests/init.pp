@@ -38,9 +38,13 @@
 class uv-yumgoodies {
   case $::osfamily {
     "Redhat": {
-      $goodies = ["screen", "htop", "vim-enhanced", "iotop", "lsscsi"]
+      $goodies = ["screen", "htop", "vim-enhanced", "iotop", "lsscsi", "xinetd", "sysstat", "expect", "nfs-utils", "sendmail", "sendmail-cf", "ksh", "yum-plugin-downloadonly", "rhncfg", "rhncfg-client", "rhncfg-management", "rhncfg-actions"]
       package { $goodies:
         ensure => "installed"
+      }
+      $notgoodies = ["rsh", "postfix"]
+      package { $notgoodies:
+        ensure => "absent"
       }
     }
   }
