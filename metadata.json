@@ -1,0 +1,14 @@
+{
+  "name": "uv-yumgoodies",
+  "version": "0.1.0",
+  "author": "Kevin Hrpcek",
+  "summary": "Installs extra packages",
+  "license": "Apache 2.0",
+  "source": "",
+  "issues_url": "Kevin",
+  "project_page": "Ask Kevin",
+  "dependencies": [
+    {"version_requirement":">= 1.0.0","name":"puppetlabs-stdlib"}
+  ]
+}
+
