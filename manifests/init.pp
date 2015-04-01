@@ -35,17 +35,10 @@
 #
 # Copyright 2014 Your name here, unless otherwise noted.
 #
-class uv-yumgoodies {
+class yumgoodies {
   case $::osfamily {
-    "Redhat": {
-      $goodies = ["screen", "htop", "vim-enhanced", "iotop", "lsscsi", "xinetd", "sysstat", "expect", "nfs-utils", "sendmail", "sendmail-cf", "ksh", "yum-plugin-downloadonly", "rhncfg", "rhncfg-client", "rhncfg-management", "rhncfg-actions"]
-      package { $goodies:
-        ensure => "installed"
+    'Redhat': {
+      include yumgoodies::install
       }
-      $notgoodies = ["rsh", "postfix"]
-      package { $notgoodies:
-        ensure => "absent"
-      }
-    }
   }
 }
